@@ -25,7 +25,7 @@ jobs:
     - name: Run script file
       run: |
             chmod 700 ./getPublickey.sh
-            ./getPublickey.sh
+            ./getPublickey.sh www.zee5.com
             shell: bash
     - name: Build with Gradle
       run: ./gradlew build
