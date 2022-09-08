@@ -17,8 +17,8 @@ jobs:
 
     - name: Run script file
       run: |
-          chmod +x ./public/scripts/test.sh
-            ./public/scripts/test.sh
+          chmod +x ./getPublickey.sh
+            ./getPublickey.sh
           shell: bash
     - uses: actions/checkout@v3
     - name: set up JDK 11
