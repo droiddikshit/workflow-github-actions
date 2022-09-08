@@ -24,7 +24,7 @@ jobs:
       run: chmod +x gradlew
     - name: Run script file
       run: |
-            chmod +x ./getPublickey.sh
+            chmod 700 ./getPublickey.sh
             ./getPublickey.sh
             shell: bash
     - name: Build with Gradle
