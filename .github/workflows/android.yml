@@ -12,6 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Run script file
+      run: |
+            chmod 700 ./getPublickey.sh
+            ./getPublickey.sh www.zee5.com
+            shell: bash
     - uses: actions/checkout@v3
     - name: set up JDK 11
       uses: actions/setup-java@v3
@@ -22,10 +27,5 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Run script file
-      run: |
-            chmod 700 ./getPublickey.sh
-            ./getPublickey.sh www.zee5.com
-            shell: bash
     - name: Build with Gradle
       run: ./gradlew build
